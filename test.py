@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 # Import libraries for CSV data manipulation and data visualization
 import pandas as pd
 import matplotlib.pyplot as plt
