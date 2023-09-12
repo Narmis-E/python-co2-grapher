@@ -29,6 +29,6 @@ def main():
 
     # Show the chart
     plt.show()
-# E.G COMMENT HERE
+# E.G COMMENT HER
 # Execute the main function
 main()
