@@ -8,7 +8,7 @@ def main():
     print("Welcome to the CO2 Emissions Visualization Program!")
 
     # Prompt the user to input the desired country, start year, and end year
-    #TODO @saka0084 - make a check if the country exists
+    #TODO - make a check if the country exists
     country = input("Enter the country: ")
     start_year = int(input("Enter the start year: "))
     end_year = int(input("Enter the end year: "))
