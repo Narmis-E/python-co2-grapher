@@ -10,7 +10,9 @@ def main():
     # Prompt the user to input the desired country, start year, and end year
     #TODO - make a check if the country exists
     country = input("Enter the country: ")
+    #TODO - make a check for the selected country's start year
     start_year = int(input("Enter the start year: "))
+    #TODO - make a check for the selected country's end year
     end_year = int(input("Enter the end year: "))
 
     # Load the CO2 emissions dataset using Pandas
