@@ -15,8 +15,8 @@ def main():
     country = input("Enter the country: ")
     
     while country not in unqiue_country:
-            print(f"{country} is not in the dataset\n")
-            country = input("Enter the country again: ")
+        print(f"{country} is not in the dataset\n")
+        country = input("Enter the country again: ")
         
     #TODO - make a check for the selected country's start year
     start_year = int(input("Enter the start year: "))
