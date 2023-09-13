@@ -22,14 +22,19 @@ def main():
     valid_years = dataset[dataset['country'] == country]['year']
     
     # Get min and max years from valid_years
-    min_year = valid_years.min()
-    max_year = valid_years.max()
+    min_year = int(valid_years.min())
+    max_year = int(valid_years.max())
 
-    #TODO - make a check for the selected country's start year
-    start_year = int(input("Enter the start year: "))
+    while country:
+        start_year = int(input(f"Enter the start year (min {min_year}): "))
+        if (start_year < min_year): 
+            print(f"{start_year} is not in the dataset\n")
+            continue
 
-    #TODO - make a check for the selected country's end year
-    end_year = int(input("Enter the end year: "))
+        end_year = int(input(f"Enter the end year (max {max_year}): "))
+        if (end_year > max_year):
+            print(f"{end_year} is not in the dataset\n")
+        break    
 
     # Filter the dataset for the selected country and years
     filtered_data = dataset[dataset['country'] == country]
