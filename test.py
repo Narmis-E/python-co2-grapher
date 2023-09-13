@@ -17,7 +17,14 @@ def main():
     while country not in unqiue_country:
         print(f"{country} is not in the dataset\n")
         country = input("Enter the country again: ")
-        
+    
+    # Set valid years equal to the years each country has
+    valid_years = dataset[dataset['country'] == country]['year']
+    
+    # Get min and max years from valid_years
+    min_year = valid_years.min()
+    max_year = valid_years.max()
+
     #TODO - make a check for the selected country's start year
     start_year = int(input("Enter the start year: "))
 
