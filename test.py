@@ -36,7 +36,7 @@ def main():
     filtered_data = filtered_data[(filtered_data['year'] >= start_year) & (filtered_data['year'] <= end_year)]
 
     # Convert the 'year' column to integers and then to strings
-    filtered_data['year'] = filtered_data['year'].astype("int").astype("str")
+    filtered_data['year'] = filtered_data['year'].astype("int")
 
     # Create a basic line chart using Matplotlib to visualize CO2 emissions over time
     plt.plot(filtered_data['year'], filtered_data['co2'])
