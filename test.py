@@ -12,7 +12,6 @@ def main():
     unqiue_country = dataset['country'].unique()
 
     # Prompt the user to input the desired country, start year, and end year
-    #TODO - make a check if the country exists
     country = input("Enter the country: ")
     
     while country not in unqiue_country:
