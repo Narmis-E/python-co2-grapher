@@ -14,12 +14,14 @@ def main():
     # Prompt the user to input the desired country, start year, and end year
     #TODO - make a check if the country exists
     country = input("Enter the country: ")
-    if (country not in unqiue_country):
-        print(f"{country} is not in the dataset\n")
-        return
     
+    while country not in unqiue_country:
+            print(f"{country} is not in the dataset\n")
+            country = input("Enter the country again: ")
+        
     #TODO - make a check for the selected country's start year
     start_year = int(input("Enter the start year: "))
+
     #TODO - make a check for the selected country's end year
     end_year = int(input("Enter the end year: "))
 
