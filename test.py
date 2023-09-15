@@ -54,9 +54,9 @@ def main():
     plt.plot(filtered_data['year'], filtered_data['co2'])
 
     # Customize the chart (e.g., labels, titles, legends)
-    plt.xlabel("Year")
-    plt.ylabel("CO2 Emissions")
-    plt.title(f"CO2 Emissions in {country} ({start_year}-{end_year})")
+    plt.xlabel("Time (Year)")
+    plt.ylabel("CO2 Emissions (Million Tons)")
+    plt.title(f"{country} CO2 Emissions ({start_year}-{end_year})")
 
     # Show the chart
     plt.show()
