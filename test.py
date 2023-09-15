@@ -34,7 +34,7 @@ def main():
             continue
 
         end_year = int(input(f"Enter the end year (max {max_year}): "))
-        if (end_year < start_year):
+        if (end_year <= start_year):
             print("End year must be greater than start year.")
             continue
 
