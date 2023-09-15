@@ -26,14 +26,21 @@ def main():
     max_year = int(valid_years.max())
 
     while country:
+        start_year = 0
+        end_year = 0
         start_year = int(input(f"Enter the start year (min {min_year}): "))
-        if (start_year < min_year): 
+        if (start_year < min_year or start_year > max_year): 
             print(f"{start_year} is not in the dataset\n")
             continue
 
         end_year = int(input(f"Enter the end year (max {max_year}): "))
-        if (end_year > max_year):
+        if (end_year < start_year):
+            print("End year must be greater than start year.")
+            continue
+
+        if (end_year > max_year or end_year < min_year):
             print(f"{end_year} is not in the dataset\n")
+            continue
         break    
 
     # Filter the dataset for the selected country and years
