@@ -1,6 +1,6 @@
 # Python CO2 Grapher
 
-Python CO2 Grapher is a simple Python program designed for an engineering project. It leverages the Our World In Data ([OWID](https://github.com/owid/co2-data) dataset on CO2 emissions to generate informative and visually appealing graphs.
+Python CO2 Grapher is a simple Python program designed for an engineering project. It leverages the Our World In Data ([OWID](https://github.com/owid/co2-data)) dataset on CO2 emissions to generate informative and visually appealing graphs.
 Features
 
 - User-friendly interface: Input your desired country, start year, and end year to visualize CO2 emissions trends.
