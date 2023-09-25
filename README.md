@@ -48,3 +48,6 @@ Follow the Prompts:
 Given the time constraints of the project, this program is relatively simple in its approach. With more time, the program would be able to use mroe data from the OWID dataset, perhaps analysing CO2 data per capita or CO2 growth %.
 This progran is also made with the command line in mind, and we did not have enough time to conturct a graphical interface to make use of our program.
 
+## Credit
+
+This project would not be possible without the open access OWID dataset and its authors: Hannah Ritchie, Max Roser, Edouard Mathieu, Bobbie Macdonald and Pablo Rosado.
