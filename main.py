@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # Import libraries for CSV data manipulation and data visualization
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -9,7 +10,7 @@ def welcome_message():
 def get_country(dataset):
     unique_countries = dataset['country'].unique()
     while True:
-        country = input("Enter a country (first letter caps): ")
+        country = input("Enter a country: ").title()
         if country in unique_countries:
             return country
         else:
@@ -21,12 +22,26 @@ def get_years(dataset, country):
     max_year = int(valid_years.max())
     
     while True:
-        start_year = int(input(f"Enter the start year (min {min_year}): "))
+        while True:
+            try:
+                start_year = int(input(f"Enter the start year (min {min_year}): "))
+            except:
+                print("Please enter a number.")
+                continue
+            break
+
         if start_year < min_year or start_year > max_year:
             print(f"{start_year} is not in the dataset or out of range\n")
             continue
 
-        end_year = int(input(f"Enter the end year (max {max_year}): "))
+        while True:
+            try:
+                end_year = int(input(f"Enter the end year (max {max_year}): "))
+            except:
+                print("Please enter a number.")
+                continue
+            break
+
         if end_year <= start_year or end_year > max_year:
             print("End year must be greater than start year and within the dataset's range.\n")
             continue
@@ -41,7 +56,15 @@ def create_plot(dataset, country, start_year, end_year):
     print("Line: 1")
     print("Scatter: 2")
     print("Column: 3")
-    graph_choice = int(input("Please select a type of graph: "))
+
+    while True:
+            try:
+                graph_choice = int(input("Please select a type of graph: "))
+            except:
+                print("Please enter a number.")
+                continue
+            break
+
     match graph_choice:
         case 1:
             plt.plot(filtered_data['year'], filtered_data['co2'], marker='.', markersize=15)
@@ -65,6 +88,7 @@ def create_plot(dataset, country, start_year, end_year):
 
 def main():
     dataset = pd.read_csv("owid-co2-data.csv")
+    print(dataset)
     welcome_message()
     country = get_country(dataset)
     start_year, end_year = get_years(dataset, country)
